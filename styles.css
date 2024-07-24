@@ -1,0 +1,668 @@
+/* GENERAL */
+
+*{
+    scroll-padding-top: 100px;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body{
+    font-family: "Tektur", sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #003459;
+    color: #FFF;
+    line-height: 1;
+}
+
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+p, h1, h2, a {
+    margin: 0;
+    padding: 0;
+}
+
+.dot{
+    color: #57B7EA;
+}
+
+/* HEADER */
+
+.header-logo{
+    max-width: 70px;
+    width: 100%;
+}
+
+header{
+    background-color: #00171F;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #57B7EA;
+    z-index: 11111111;
+}
+
+.header{
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu-buttons{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    position: relative;
+}
+
+.header-heading{
+    padding: 20px 0;
+}
+
+.menu-option{
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.lang-opt{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px 0px;
+}
+
+.lang-opt .inact-arrow{
+    display: none;
+}
+
+.rotate-arrow {
+    transform: rotate(180deg);
+}
+
+.lang-inact{
+    display: none;
+}
+
+.material-symbols-outlined.brightness{
+    display: none;
+}
+
+.material-symbols-outlined.act-mode{
+    display: block;
+}
+
+.menu-languages {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+    position: absolute;
+    bottom: -79px;
+    left: -20px;
+    flex-direction: column;
+    background-color: #00171F;
+    border-left: #57B7EA 1px solid;
+    border-right: #57B7EA 1px solid;
+    border-bottom: #57B7EA 1px solid;
+}
+
+.menu-option-mobile{
+    text-align: center;
+    line-height: 2;
+    transition: all 200ms ease-in-out;
+}
+
+.menu-option-mobile:hover{
+    color: #57B7EA;
+}
+
+.menu-languages.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+}
+
+.menu-languages .lang-opt{
+    line-height: 1.2;
+    padding: 10px 20px;
+    margin-right: 0;
+}
+
+.menu-languages .lang-opt:hover{
+    background-color: #003459;
+}
+
+.menu-option:hover{
+    color: #57B7EA;
+    transition: all 200ms ease-in-out;
+}
+
+.menu-options-mobile{
+    display: none;
+}
+
+.header-menu .menu-toggle{
+    display: none;
+}
+
+.header-menu .menu-close{
+    display: none;
+}
+
+.menu-options-mobile{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: -20px;
+    bottom: -171px;
+    background-color: #00171F;
+    border-left: #57B7EA 1px solid;
+    border-bottom: #57B7EA 1px solid;
+    padding: 10px 20px;
+    align-items: center;
+    padding-top: 0;
+    font-size: 20px;
+}
+
+/* BODY */
+
+.inac-logo{
+    display: none;
+}
+
+.body{
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 150px;
+    margin-bottom: 100px;
+}
+
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 140px;
+    margin-top: 130px;
+}
+
+.about-text{
+    width: 45%;
+}
+
+.about-apps{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-right: 85px;
+}
+
+.about-app{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 10px;
+    opacity: 0.9;
+    scale: 0.95;
+    justify-content: end;
+}
+
+.about-app:hover{
+    opacity: 1;
+    scale: 1;
+    transition: 300ms all ease-in-out;
+}
+
+.about-img{
+    width: 100%;
+    max-width: 75px;
+    height: fit-content;
+    margin-bottom: 15px;
+}
+
+.about-heading{
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.about-paragraph{
+    line-height: 20px;
+}
+
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    margin-bottom: 100px;
+    margin-top: 40px;
+}
+
+.portfolio-card{
+    border-radius: 15px;
+    transition: all 300ms ease-in-out;
+}
+
+.port-img{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    border-bottom: 1px solid #57B7EA;
+}
+
+.card-heading{
+    line-height: 1.7;
+    padding-bottom: 10px;
+    color: #57B7EA;
+}
+
+.card-text{
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.code-button{
+    border-radius: 5px;
+    background-color: #57B7EA;
+    color: #FFF;
+    padding: 10px 32px;
+    margin-right: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.code-button:hover{
+    scale: 1.01;
+    border: 2px solid #FFF;
+}
+
+.page-button{
+    border-radius: 5px;
+    color: #57B7EA;
+    background-color: #FFF;
+    padding: 10px 20px;
+    transition: all 300ms ease-in-out;
+}
+
+.page-button:hover{
+    scale: 1.01;
+    border: 2px solid #57B7EA;
+}
+
+.card-buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.port-text{
+    background-color: #00171F;
+    border-radius: 0 0 15px 15px;
+    margin-top: -3px;
+    padding: 15px;
+    min-height: 216px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-card:hover{
+    scale: 1.05;
+    box-shadow: 0px 10px 20px 10px rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #00171F;
+}
+
+.footer{
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    position: relative;
+}
+
+.location-icon{
+    max-width: 50px;
+    width: 100%;
+    height: fit-content;
+}
+
+.li-logo{
+    max-width: 30px;
+    width: 100%;
+    height: fit-content;
+    margin-right: 9px;
+}
+
+.contact-links{
+    display: flex;
+    align-items: center;
+}
+
+.contact-link:hover{
+    scale: 1.1;
+}
+
+.contact-link{
+    transition: all 300ms ease-in-out;
+}
+
+.contact-text{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.footer-heading{
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.middle-triangle{
+    margin: 0 -22px;
+}
+
+.footer-logo{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 80px;
+}
+
+.contact-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+
+.material-symbols-outlined{
+    margin-right: 5px;
+    color: #57B7EA;
+    transition: transform 0.3s ease;
+}
+
+.contact-info-container{
+    margin-right: 50px;
+}
+
+.contact-heading{
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-words{
+    position: absolute;
+    bottom: 19%;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-words span{
+    margin-left: 8px;
+    font-size: 17px;
+}
+
+/* PAGES */
+
+.page-title{
+    padding-top: 130px;
+    font-size: 32px;
+}
+
+.desktop-img, .mobile-img{
+    max-width: 80%;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.images-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1500px) {
+
+    .body, .header, .footer{
+        margin: 0 40px;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+    
+    .portfolio-container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 45px;
+    }
+
+    .about-apps{
+        margin-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+    
+    .portfolio-container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+
+    .body, .header, .footer{
+        margin: 0 30px;
+    }
+
+    .port-text{
+        min-height: 236px;
+    }
+
+    .about-apps{
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 10px;
+    }
+
+    .footer{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .footer-words{
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 875px) {
+    
+    .portfolio-container{
+        gap: 45px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .body, .header, .footer{
+        margin: 0 40px;
+    }
+
+    .port-text{
+        min-height: 216px;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+    
+    .portfolio-container{
+        gap: 35px;
+    }
+
+    .body, .header, .footer{
+        margin: 0 30px;
+    }
+
+    .port-text{
+        min-height: 236px;
+    }
+
+    .about-apps{
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 20px;
+        gap: 35px;
+    }
+
+    .main-img{
+        width: 100%;
+    }
+
+    .footer{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .contact-text {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .contact-links{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    
+    .portfolio-container{
+        gap: 25px;
+    }
+
+    .body, .header, .footer{
+        margin: 0 20px;
+    }
+
+    .port-text{
+        min-height: 236px;
+    }
+    
+    .header-menu .menu-toggle{
+        display: block;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    .header-menu .menu-close{
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    .menu-options{
+        display: none;
+    }
+
+    .header{
+        position: relative;
+    }
+
+    .about-apps{
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    
+    .portfolio-container{
+        gap: 35px;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        width: 100%;
+    }
+
+    .body, .header, .footer{
+        margin: 0 30px;
+    }
+
+    .port-text{
+        min-height: 216px;
+    }
+
+    .about-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about-text{
+        width: 100%;
+    }
+
+    .about-paragraph{
+        margin-bottom: 50px;
+    }
+
+    .about-container{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .about-heading{
+        text-align: center;
+    }
+
+    .contact-text{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact-info-container, .contact-info{
+        margin-right: 0;
+    }
+
+    .contact-heading, .contact-info-container{
+        text-align: center;
+    }
+
+    .footer-logo{
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    .footer-words{
+        font-size: 15px;
+    }
+
+    .footer{
+        justify-content: center;
+    }
+    
+    .menu-options-mobile{
+        right: -30px;
+    }
+
+}
